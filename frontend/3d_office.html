@@ -1,0 +1,27 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Web Developer Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+<body>
+    <div id="3d_office"></div>
+    <div id="chat_box">
+        <input type="text" id="chat_input" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script src="js/3d_rendering.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/chat.js"></script>
+    <script>
+        window.onload = function() {
+            render3DOffice();
+            document.getElementById('3d_office').addEventListener('click', handleClick);
+        };
+    </script>
+</body>
+</html>
+```
